@@ -1,0 +1,337 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body{
+  overflow-x: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+}
+
+
+#rate{
+  font-size: 20px;
+  font-weight: 800;
+  transform: translateY(0.5rem);
+  color:rgba(41, 178, 135, 0.925)}
+.container{
+   overflow-x: hidden;
+   overflow-y: auto;
+   margin: 0;
+   padding: 0;
+   height: 100%;
+   width:100%;
+  align-items: center;
+  background-color:#e7e7e7 ;
+}
+.modal {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    
+}
+
+/* Modal Content/Box */
+.modal__content {
+  background-color: #fefefedd;
+  margin: 5% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #8b6464;
+  width: 90%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  transform: translateY(-1.2rem);
+  color: #a29c9c;
+  float: right;
+  font-size: 38px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+button{
+  font-size: 1rem;
+  border: none;
+  color:blue;
+  cursor: pointer;
+}
+svg{
+  color: red;
+}
+/*=============== CARD ===============*/
+
+.container9 {
+  border-bottom-right-radius: 5rem;
+  border-bottom-left-radius: 5rem;
+  display: flex;  
+  justify-content: flex-start; 
+  margin-bottom: 50rem;
+  margin-top: 2rem;
+}
+
+.card__article {
+ transform: translateX(23rem);
+ position: relative;
+}
+
+/*
+|----------------------------------------------------------
+| Arrow Container
+|----------------------------------------------------------
+*/
+.arrow {
+    position: absolute;
+    top: 50%; 
+    width: 100%;
+    transform: translateY(-50%); 
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+/*
+|----------------------------------------------------------
+| Arrow Buttons (The Circular Background)
+| This contains all the style for the background and centering.
+|----------------------------------------------------------
+*/
+.arrowleft,
+.arrowright {
+    /* BACKGROUND/SHAPE STYLES */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(238, 252, 253);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    border: none; /* Remove default button border */
+    
+    /* Centering the CHEVRON inside the button */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-160px);
+}
+
+.arrowleft {
+    margin-left: 10px;
+}
+
+.arrowright {
+    margin-right: 10px;
+}
+
+/*
+|----------------------------------------------------------
+| Chevron Shape (The Border-Trick Arrow)
+| This now holds only the border-related styles.
+|----------------------------------------------------------
+*/
+.chevron {
+    border: solid #6e7254; 
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 8.8px; 
+}
+
+/* |----------------------------------------------------------
+| Chevron Rotation (Direction)
+|----------------------------------------------------------
+*/
+/* Applies to the .chevron inside the .arrowleft button */
+.arrowleft .chevron {
+    transform: rotate(135deg); /* Points Left */
+    margin-right: -5px; /* Small adjustment for better visual centering */
+}
+
+/* Applies to the .chevron inside the .arrowright button */
+.arrowright .chevron {
+    transform: rotate(-45deg); /* Points Right */
+    margin-left: -5px; /* Small adjustment for better visual centering */
+}
+.card__img {
+  box-shadow: 0 8px 34px hsla(0, 0%, 0%, 0.285);
+  display: block;
+  border-radius: 1rem;
+}
+.sliderwrapper{
+  transform: translateX(-10rem);
+  position: relative;
+  max-width: 70rem;
+}
+.slider{
+  display: flex;
+
+  aspect-ratio: 9/6;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  border-radius: 0.5rem;
+}
+.slider::-webkit-scrollbar{
+  display: none;
+}
+.slider img{
+  flex:1 0 100%;
+  object-fit: cover;
+  scroll-snap-align: start;
+}
+
+.card__data {
+  width: 70rem;
+  height: 43rem;
+  z-index: 10;
+  background-color:rgb(242, 245, 247);
+  padding: 0.3rem;
+  padding-right: 0.5rem;
+  border-radius:1rem 0rem;
+  position: absolute;
+  margin-inline: auto;
+  transform: translateY(-5rem) translateX(-10rem); 
+}
+  .flex{
+   display: flex;
+}
+
+.card__title {
+  padding-bottom: 10px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 40px;
+  font-weight: 800;
+  color: rgb(14, 23, 24);
+  padding-left:10px;
+}
+
+.card__stars{
+    color:gold;
+    font-size: 2.6rem;
+    transform: translateY(-0.4rem);
+    margin-left: 20px;
+}
+.halfstar {
+  /* Set a large font size for visibility */
+  font-size: 2.6rem;
+      transform: translateY(-0.4rem);
+
+  /* Use a star character (Font Awesome or Unicode like '★') */
+  color: #ccc; /* Default color (unfilled) */
+  
+  /* 1. Create a background with the colors you want */
+  background: linear-gradient(to right, 
+    gold 0%,      /* Start the filled color (gold) at 0% */
+    gold 50%,     /* End the filled color (gold) at 50% for a half star */
+    #ccc 50%,     /* Start the unfilled color (gray) at 50% */
+    #ccc 100%     /* End the unfilled color (gray) at 100% */
+  );
+  
+  /* 2. Apply the gradient as a text mask (vendor prefixes might be needed) */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  /* Fallback for browsers that don't support text-fill-color */
+  background-clip: text;
+  
+  /* Set width/display properties if necessary for layout */
+  display: inline-block;
+  white-space: nowrap;
+}
+.plain{
+   color:rgb(198, 196, 184);
+    font-size: 2.6rem;
+    transform: translateY(-0.4rem);
+}
+.cost{
+  padding-left: 20px;
+  padding-top: 50px;
+}
+h4{
+  color:#695a5a;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.date{
+  margin:80px 0 10px 22rem;
+}
+.date2{
+    margin:90px 0 10px 22rem;
+
+}
+.cost h2{
+  padding-left: 20px;
+  font-size: 35px;
+  color: green;
+}
+.date3{
+  
+    margin:90px 0px 10px 22rem;
+
+}
+
+.overview h4{
+  font-size: 17px;
+  color:#050140;
+  margin: 6px 0 20px 30px;
+  
+}
+.overview h2{
+  color:#012a56;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.expect{
+  margin-top: 10px;
+}
+.expect h2{
+  transform: translateY(1px);}
+.expect h3{
+  color:#050140;
+  margin-bottom: 10px;
+  }
+.tips{
+  margin-top: 10px;
+}
+.tips h3{
+  color: #000;
+}
+li{
+  margin-top: 10px;
+  margin-left: 30px;
+}
+.cost1{
+  padding-left: 20px;
+  padding-top: 50px;
+}
+.cost1 h4{
+  font-size: 30px;
+  color:green;
+}
+.cost1 h3{
+  font-size: 20px;
+  color:#695a5a;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.flex h5{
+  transform: translateY(90px) translateX(-23px);
+  font-size:18px;
+  color:green
+}
+.flex3{
+  display: flex;
+  transform: translateY(-40px);
+}

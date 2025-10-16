@@ -1,0 +1,599 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body{
+  overflow-x: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+}
+
+
+#rate{
+  font-size: 20px;
+  font-weight: 800;
+  transform: translateY(0.5rem);
+  color:rgba(41, 178, 135, 0.925)}
+.container{
+   overflow-x: hidden;
+   overflow-y: auto;
+   margin: 0;
+   padding: 0;
+   height: 100%;
+   width:100%;
+  align-items: center;
+  background-color:#e7e7e7 ;
+}
+.modal {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    
+}
+
+/* Modal Content/Box */
+.modal__content {
+  background-color: #fefefedd;
+  margin: 5% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #8b6464;
+  width: 90%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  transform: translateY(-1.2rem);
+  color: #a29c9c;
+  float: right;
+  font-size: 38px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+button{
+  font-size: 1rem;
+  border: none;
+  color:blue;
+  cursor: pointer;
+}
+svg{
+  color: red;
+}
+/*=============== CARD ===============*/
+.nav {
+   position: sticky;
+   top: 0;
+  z-index: 1000;
+  width: 100%;
+  height:4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 1px;
+  background-color:rgb(8, 168, 193) ;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 60px;
+  font-weight: bold;
+  color: white;
+  font-family: "Playfair Display", serif;
+}
+
+.navlinks {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+}
+
+.navlinks a {
+  text-decoration: none;
+  color: white;
+  padding-right: 40px;
+  font-size: 30px;
+  font-family: "Roboto Slab", serif;
+}
+.navlinks a:hover {
+  font-size: 1.95rem;
+}
+#sign {
+  font-weight: bold;
+  color: rgb(137, 251, 213);
+}
+.container9 {
+  border-bottom-right-radius: 5rem;
+  border-bottom-left-radius: 5rem;
+  display: flex;  
+  justify-content: flex-start; 
+  margin-bottom: 20rem;
+  margin-top: 3rem;
+}
+
+.card__article {
+ transform: translateX(23rem);
+ position: relative;
+}
+
+/*
+|----------------------------------------------------------
+| Arrow Container
+|----------------------------------------------------------
+*/
+.arrow {
+    position: absolute;
+    top: 50%; 
+    width: 100%;
+    transform: translateY(-50%); 
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+/*
+|----------------------------------------------------------
+| Arrow Buttons (The Circular Background)
+| This contains all the style for the background and centering.
+|----------------------------------------------------------
+*/
+.arrowleft,
+.arrowright {
+    /* BACKGROUND/SHAPE STYLES */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(238, 252, 253);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    border: none; /* Remove default button border */
+    
+    /* Centering the CHEVRON inside the button */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-160px);
+}
+
+.arrowleft {
+    margin-left: 10px;
+}
+
+.arrowright {
+    margin-right: 10px;
+}
+
+/*
+|----------------------------------------------------------
+| Chevron Shape (The Border-Trick Arrow)
+| This now holds only the border-related styles.
+|----------------------------------------------------------
+*/
+.chevron {
+    border: solid #6e7254; 
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 8.8px; 
+}
+
+/* |----------------------------------------------------------
+| Chevron Rotation (Direction)
+|----------------------------------------------------------
+*/
+/* Applies to the .chevron inside the .arrowleft button */
+.arrowleft .chevron {
+    transform: rotate(135deg); /* Points Left */
+    margin-right: -5px; /* Small adjustment for better visual centering */
+}
+
+/* Applies to the .chevron inside the .arrowright button */
+.arrowright .chevron {
+    transform: rotate(-45deg); /* Points Right */
+    margin-left: -5px; /* Small adjustment for better visual centering */
+}
+.card__img {
+  box-shadow: 0 8px 34px hsla(0, 0%, 0%, 0.285);
+  display: block;
+  border-radius: 1rem;
+}
+.sliderwrapper{
+  transform: translateX(-10rem);
+  position: relative;
+  max-width: 70rem;
+}
+.slider{
+  display: flex;
+
+  aspect-ratio: 9/6;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  border-radius: 0.5rem;
+}
+.slider::-webkit-scrollbar{
+  display: none;
+}
+.slider img{
+  
+  flex:1 0 100%;
+  object-fit: cover;
+  scroll-snap-align: start;
+}
+
+.card__data {
+  width: 70rem;
+  height: 20rem;
+  z-index: 10;
+  background-color:rgb(242, 245, 247);
+  padding: 0.3rem;
+  padding-right: 0.5rem;
+  border-radius:1rem 0rem;
+  position: absolute;
+  margin-inline: auto;
+  transform: translateY(-5rem) translateX(-10rem); 
+}
+  .flex{
+   display: flex;
+  justify-content: space-between;
+}
+
+.card__title {
+  padding-bottom: 10px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 40px;
+  font-weight: 800;
+  color: rgb(14, 23, 24);
+  padding-left:10px;
+}
+
+.card__stars{
+    color:gold;
+    font-size: 2.4rem;
+    transform: translateY(-0.5rem);
+}
+.card__stars2{
+  width: 4rem;
+  padding-left: 5px;
+  padding-top: 5px;
+  border-radius: 10px 0rem;
+  height: 3rem;
+  color:rgb(242, 241, 237);
+  font-size: 2rem;
+  border: solid rgba(244, 132, 27, 0.504);
+  background-color: rgb(237, 154, 39);
+  box-shadow: 0 3px 10px hsla(0, 0%, 0%, 0.266);
+transform: translateY(1px);
+}
+.breakfast{
+  margin: 6px;
+  display: flex;
+  width:12rem;
+  height: 35px;
+  padding: 3px;
+  border:solid rgba(80, 74, 74, 0.671);
+  border-radius:6px;
+}
+.fitness{
+  margin: 6px;
+  display: flex;
+  width:10rem;
+  height: 35px;
+  padding: 3px;
+  border:solid rgba(80, 74, 74, 0.671);
+  border-radius:6px;
+}
+h5{
+  font-size: 14px;
+  margin:4px;
+  margin-left: 10px;
+}
+.props{
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+.pool{
+   margin: 6px;
+  display: flex;
+  width:13rem;
+  height: 35px;
+  padding: 3px;
+  border:solid rgba(80, 74, 74, 0.671);
+  border-radius:6px;
+}
+
+.pool h5{
+margin-left: 6px;
+}
+.smoking{
+   margin: 6px;
+  display: flex;
+  width:12rem;
+  height: 35px;
+  padding: 3px;
+  border:solid rgba(80, 74, 74, 0.671);
+  border-radius:6px;
+}
+.parking{
+   margin: 6px;
+  display: flex;
+  width:10rem;
+  height: 35px;
+  padding: 3px;
+  border:solid rgba(80, 74, 74, 0.671);
+  border-radius:6px;
+}
+.parking svg{
+transform: translateY(-4px);}
+.room{
+   margin: 6px;
+  display: flex;
+  width:9rem;
+  height: 35px;
+  padding: 3px;
+  border:solid rgba(80, 74, 74, 0.671);
+  border-radius:6px;
+}
+.props2{
+   display: flex;
+  justify-content: center;
+}
+.cafe{
+  margin: 6px;
+  display: flex;
+  width:9rem;
+  height: 35px;
+  padding: 3px;
+  border:solid rgba(80, 74, 74, 0.671);
+  border-radius:6px;
+}
+.parking2{
+   margin: 6px;
+  display: flex;
+  width:7rem;
+  height: 35px;
+  padding: 3px;
+  border:solid rgba(80, 74, 74, 0.671);
+  border-radius:6px;
+}
+.beach{
+   margin: 6px;
+  display: flex;
+  width:10rem;
+  height: 35px;
+  padding: 3px;
+  border:solid rgba(80, 74, 74, 0.671);
+  border-radius:6px;
+  background-color:rgba(196, 242, 255, 0.43) ;
+}
+.wifi{
+   margin: 6px;
+  display: flex;
+  width:8rem;
+  height: 35px;
+  padding: 3px;
+  border:solid rgba(80, 74, 74, 0.671);
+  border-radius:6px;
+}
+.spa{
+  margin: 6px;
+  display: flex;
+  width:14rem;
+  height: 35px;
+  padding: 3px;
+  border:solid rgba(80, 74, 74, 0.671);
+  border-radius:6px;
+}
+.disabled{
+  margin: 6px;
+  display: flex;
+  width:9rem;
+  height: 35px;
+  padding: 3px;
+  border:solid rgba(80, 74, 74, 0.671);
+  border-radius:6px;
+}
+.disabled svg{
+  transform: translateY(-2px);
+}
+.hot{
+  margin: 6px;
+  display: flex;
+  width:7rem;
+  height: 35px;
+  padding: 3px;
+  border:solid rgba(80, 74, 74, 0.671);
+  border-radius:6px;
+}
+.laundry{
+  margin: 6px;
+  display: flex;
+  width:10rem;
+  height: 35px;
+  padding: 3px;
+  border:solid rgba(80, 74, 74, 0.671);
+  border-radius:6px;
+}
+.cafe2{
+   margin: 6px;
+  display: flex;
+  width:9rem;
+  height: 35px;
+  padding: 3px;
+  border:solid rgba(80, 74, 74, 0.671);
+  border-radius:6px;
+}
+
+.confrence{
+   margin: 6px;
+  display: flex;
+  width:11rem;
+  height: 35px;
+  padding: 3px;
+  border:solid rgba(80, 74, 74, 0.671);
+  border-radius:6px;
+}
+.wifi2{
+   margin: 6px;
+  display: flex;
+  width:8rem;
+  height: 35px;
+  padding: 3px;
+  border:solid rgba(80, 74, 74, 0.671);
+  border-radius:6px;
+}
+.spa2{
+  margin: 6px;
+  display: flex;
+  width:14rem;
+  height: 35px;
+  padding: 3px;
+  border:solid rgba(80, 74, 74, 0.671);
+  border-radius:6px;
+}
+.disabled2{
+  margin: 6px;
+  display: flex;
+  width:9rem;
+  height: 35px;
+  padding: 3px;
+  border:solid rgba(80, 74, 74, 0.671);
+  border-radius:6px;
+}
+.disabled2 svg{
+  transform: translateY(-2px);
+}
+.hot2{
+  margin: 6px;
+  display: flex;
+  width:11rem;
+  height: 35px;
+  padding: 3px;
+  border:solid rgba(80, 74, 74, 0.671);
+  border-radius:6px;
+}
+.breakfast2{
+  margin: 6px;
+  display: flex;
+  width:11rem;
+  height: 35px;
+  padding: 3px;
+  border:solid rgba(80, 74, 74, 0.671);
+  border-radius:6px;
+}
+h5{
+  font-size: 14px;
+  margin:4px;
+  margin-left: 10px;
+}
+.props{
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+.pool2{
+   margin: 6px;
+  display: flex;
+  width:11rem;
+  height: 35px;
+  padding: 3px;
+  border:solid rgba(80, 74, 74, 0.671);
+  border-radius:6px;
+}
+
+.pool2 h5{
+margin-left: 6px;
+}
+.fitness2{
+   margin: 6px;
+  display: flex;
+  width:11rem;
+  height: 35px;
+  padding: 3px;
+  border:solid rgba(80, 74, 74, 0.671);
+  border-radius:6px;
+}
+
+.check{
+   margin: 6px;
+  display: flex;
+  width:10rem;
+  height: 35px;
+  padding: 3px;
+  border:solid rgba(80, 74, 74, 0.671);
+  border-radius:6px;
+}
+.laundry2{
+  margin: 6px;
+  display: flex;
+  width:10rem;
+  height: 35px;
+  padding: 3px;
+  border:solid rgba(80, 74, 74, 0.671);
+  border-radius:6px;
+}
+.parking3{
+   margin: 6px;
+  display: flex;
+  width:10rem;
+  height: 35px;
+  padding: 3px;
+  border:solid rgba(80, 74, 74, 0.671);
+  border-radius:6px;
+}
+.money{
+ margin: 6px;
+  display: flex;
+  width:12rem;
+  height: 35px;
+  padding: 3px;
+  border:solid rgba(80, 74, 74, 0.671);
+  border-radius:6px;
+}
+.pool3{
+  margin: 6px;
+  display: flex;
+  width:8rem;
+  height: 35px;
+  padding: 3px;
+  border:solid rgba(80, 74, 74, 0.671);
+  border-radius:6px;
+}
+.family{
+   margin: 6px;
+  display: flex;
+  width:10rem;
+  height: 35px;
+  padding: 3px;
+  border:solid rgba(80, 74, 74, 0.671);
+  border-radius:6px;
+}
+.cost{
+  direction: rtl;
+  padding-top: 10px;
+}
+h4{
+  color:#695a5a;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+h3{
+  color: green;
+}
+.cost h2{
+  font-size: 35px;
+  color: green;
+}
