@@ -39,14 +39,6 @@ function Signup() {
         </ul>
       </div>
 
-        <form className={styles.formbox}>
-          <div className={styles.inputgroup}>
-            <input type="text" id='email' className={styles.inputfield} placeholder='' required />
-            <label className={styles.floatinglabel}>First Name</label>
-          </div>
-          <div className={styles.inputgroup}>
-            <input type="text" id='email' className={styles.inputfield} placeholder='' required />
-            <label htmlFor='email' className={styles.floatinglabel}> Last Name</label>
       <div className={styles.container3}>
         <div className={styles.formcontainer}>
           <div className={styles.formblob}>
